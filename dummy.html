@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner App</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="dummy.css">
+</head>
+
+<body>
+    <section class="navigation">
+        <nav class="nav">
+            <img src="" alt="logo">
+        </nav>
+    </section>
+    <section class="user-form">
+        <div class="users-data">
+            <form>
+                <!-- <div> -->
+                <label for="height">Enter Height (in cm): </label>
+                <input type="number" placeholder="Enter height" id="height" required>
+                <!-- </div> -->
+                <!-- <div> -->
+                <label for="height">Enter Weight (in cm): </label>
+                <input type="number" placeholder="Enter weight" id="weight" required>
+                <!-- </div> -->
+                <label for="age">Enter the Age: </label>
+                <input type="number" placeholder="Enter age" id="age" min="12" max="95" required>
+                <label for="gender">Enter Gender:</label>
+                <select name="" id="gender" required>
+                    <option value="">Gender</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <label for="activity">Select Physical Activity level: </label>
+                <select name="" id="activity" required>
+                    <option value="">Physical Activity</option>
+                    <option value="light">Light</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">active</option>
+                </select>
+                <button type="submit" id="meals-btn">Generate Meals</button>
+            </form>
+        </div>
+    </section>
+    <section class="meal-plan">
+        <div class="meals">
+            <div class="card">
+                <h2>BreakFast</h2>
+                <div class="image" id="meal-image">
+                    <img src="" alt="breakfast">
+                </div>
+                <div class="details">
+                    <h4 id="meal name">Meal 1</h4>
+                    <h5 id="calories">Calories 300</h5>
+                    <button id="get-recipe">Get Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>BreakFast</h2>
+                <div class="image" id="meal-image">
+                    <img src="" alt="breakfast">
+                </div>
+                <div class="details">
+                    <h4 id="meal name">Meal 1</h4>
+                    <h5 id="calories">Calories 300</h5>
+                    <button id="get-recipe">Get Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>BreakFast</h2>
+                <div class="image" id="meal-image">
+                    <img src="" alt="breakfast">
+                </div>
+                <div class="details">
+                    <h4 id="meal name">Meal 1</h4>
+                    <h5 id="calories">Calories 300</h5>
+                    <button id="get-recipe">Get Recipe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recipe">
+        <div class="main-recipe">
+            <div class="sample">
+                <div class="Ingredients">
+                    <h1>Ingredients</h1>
+                    <div class="ingredients-details">
+                        some details
+                    </div>
+                </div>
+                <div class="steps">
+                    <h1>Steps</h1>
+                    <div class="steps-details">
+                        some steps
+                    </div>
+                </div>
+                <div class="Equipment">
+                    <h1>Equipment</h1>
+                    <div class="equipment-details">
+                        some equipement
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- <section class="footer-section">
+        <div class="footer">
+            <p>Copyright © 2023 All Rights Reserved.</p>
+            <p>Made <i class="fa-solid fa-heart" style="color: #fff;"></i> by
+                <a href="#" target="_blank" class="link-light">Shaikh Irfan</a>
+            </p>
+        </div>
+    </section> -->
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+    <script src="dummy.js"></script>
+
+</body>
+
+</html>
