@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/d44a5a5439.js" crossorigin="anonymous"></script>
     <title>Swadisht Meal Planner</title>
+    <!-- email function -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('cBGu1Qg1UocsW5R6h');
+        })();
+    </script>
 </head>
 
 <body>
@@ -43,19 +51,23 @@
         <article>
             <form class="form contact-form">
                 <div class="form-row">
-                    <label html="name" class="form-label">your name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" class="form-input" />
+                    <label html="name" class="form-label">Your name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" class="form-input" required />
                 </div>
                 <div class="form-row">
-                    <label html="email" class="form-label">your email</label>
-                    <input type="email" name="email" placeholder="Enter your Email" id="email" class="form-input" />
+                    <label html="email" class="form-label">Your email</label>
+                    <input type="email" name="email" placeholder="Enter your Email" id="email" class="form-input" required />
+                </div>
+                <div class="form-row">
+                    <label html="mobile" class="form-label">Your mobile Number</label>
+                    <input type="text" name="mobile" placeholder="Enter your Mobile No" id="mobile" class="form-input" required />
                 </div>
                 <div class="form-row">
                     <label html="message" class="form-label">message</label>
-                    <textarea name="message" id="message" placeholder="Write your Feedback Here..." class="form-textarea"></textarea>
+                    <textarea name="message" id="message" placeholder="How can we help you?" class="form-textarea" required></textarea>
                 </div>
-                <button type="submit" id="contact-btn" class="contact-btn btn-block">
-                    Submit
+                <button type="submit" id="contact-btn" class="contact-btn btn-block" onclick="SendMail(event)">
+                    Send
                 </button>
             </form>
         </article>
@@ -80,7 +92,8 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="./App.js"></script>
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

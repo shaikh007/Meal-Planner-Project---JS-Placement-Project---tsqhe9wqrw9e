@@ -3,7 +3,9 @@ const weightInput = document.getElementById("weight");
 const ageInput = document.getElementById("age");
 const genderInput = document.getElementById("gender");
 const activityInput = document.getElementById("activity");
+
 const submit = document.getElementById("submitBtn");
+
 const cardContainer = document.getElementById("cards-container");
 const mealsDetails = document.getElementById("details");
 const ingredientSection = document.getElementById("ingredients");
