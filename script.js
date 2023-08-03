@@ -11,10 +11,4 @@ function SendMail(event) {
         alert("Sent Successfully 😇 " + res.status);
     })
     console.log(params);
-    // emailjs.send('service_jgawk9s', 'template_bs73s3k', params)
-    //     .then(function(response) {
-    //         alert('SUCCESS!', response.status, response.text);
-    //     }, function(error) {
-    //         alert('FAILED...', error);
-    //     });
 }

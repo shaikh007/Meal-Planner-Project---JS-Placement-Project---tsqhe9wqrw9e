@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
-    --primary: #e5b6b6;
+    --primary: #eee75a;
     --secondary: #fc88d1;
     --light: #ffffff;
 }
@@ -16,6 +16,7 @@ body {
 .nav-container {
     display: flex;
     justify-content: flex-end;
+    margin-left: 78px;
     width: 80%;
 }
 
@@ -35,89 +36,126 @@ body {
 
 a {
     text-decoration: none;
-    color: #f9f9f9;
+    color: #0f0f0f;
     cursor: pointer;
+    padding-right: 5px;
 }
 
 a:hover {
     color: #888;
 }
 
-ul {
-    list-style: none;
+.input-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 5rem;
+    margin: 2rem 3rem 3rem 10rem;
 }
 
-ul li {
-    margin: 20px;
-}
-
-ol li {
-    margin: 10px;
-}
-
-ul li::before {
-    content: "\2022";
-    color: var(--primary);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1.3em;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary);
-    border: 1px solid var(--secondary);
-    transition: 0.3s;
-}
-
-.btn.btn-primary:active {
-    background-color: var(--secondary);
-    border: 1px solid var(--secondary);
-}
-
-.btn-outline-primary {
-    background-color: var(--light);
-    border: 1px solid var(--primary);
-    color: var(--primary);
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-    color: var(--light);
-    transition: 0.3s;
-}
-
-.btn.btn-outline-primary:active {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-    color: var(--light);
-}
-
-.baseBlock {
-    cursor: pointer;
-    margin: 0px 0px 35px 0px;
-    padding: 0 0 15px 0px;
-    border-radius: 5px;
+.text {
+    background-color: lightgray;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    width: 50vw;
+    height: 5.8vh;
     overflow: hidden;
-    background: var(--light);
-    -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    border-radius: 0.5rem;
 }
 
-.baseBlock:hover {
-    -webkit-transform: translate(0, -8px);
-    -moz-transform: translate(0, -8px);
-    -ms-transform: translate(0, -8px);
-    -o-transform: translate(0, -8px);
-    transform: translate(0, -8px);
-    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
+.para-text {
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: teal;
+}
+
+.height-section,
+.weight-section,
+.age-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.gender-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+}
+
+.activity-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+label {
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+input {
+    width: 15vw;
+    height: 5vh;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: lightgray;
+    border: none;
+}
+
+span {
+    color: #1200ff;
+}
+
+#gender,
+#activity {
+    width: 12vw;
+    height: 5vh;
+    font-size: 0.95rem;
+    padding: 0.1rem;
+    border-radius: 0.3rem;
+    background-color: lightgray;
+    border: none;
+    color: teal;
+}
+
+#activity {
+    width: 27vw;
+}
+
+.btn-container {
+    margin-top: 0;
+}
+
+.btn {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    background-color: rgb(238, 98, 79);
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: red;
 }
 
 .footer {
@@ -144,6 +182,33 @@ ul li::before {
 
 .icon:hover {
     color: #f2741a;
+}
+
+.copyright {
+    color: black;
+}
+
+@media only screen and (max-width: 800px) {
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .gender-section,
+    .activity-section {
+        margin-left: 0rem;
+    }
+    input {
+        width: 50vw;
+    }
+    #gender {
+        width: 50vw;
+    }
+    #activity {
+        width: 50vw;
+    }
 }
 
 
@@ -213,6 +278,7 @@ ul li::before {
 
 .contact-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     /* gap: 2rem 3rem; */
     padding-top: 3rem;
@@ -278,4 +344,47 @@ ul li::before {
     border-radius: 5px;
     border: 0.1px solid rgb(111, 108, 108);
     text-align: center;
+}
+
+
+/* OverLay Styles */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(hero_image.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+.form-box h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #3c00a0;
+    position: relative;
+}
+
+.form-box h1::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
 }

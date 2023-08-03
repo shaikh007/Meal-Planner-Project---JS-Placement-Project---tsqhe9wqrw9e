@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo-image {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1.2rem 0 5rem;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.nav-bar {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(238, 98, 79);
+    color: white;
+    position: fixed;
+    top: 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: rgb(240, 115, 99);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-image {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-list {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    margin: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.calorie {
+    width: 40vw;
+    height: 5vh;
+    margin: 1rem;
+    background-color: lightgrey;
+    color: teal;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30vw;
+    font-weight: 500;
+    margin-top: 5rem;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.generated-meal {
+    margin: 0 3rem 5.5rem 3rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.breakfast,
+.lunch,
+.dinner {
+    margin: 0.5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    color: teal;
+    margin: 0.5rem;
+}
+
+.image-1,
+.image-2,
+.image-3 {
+    width: 23vw;
+    height: 13rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.title-1,
+.title-2,
+.title-3 {
+    color: white;
+    width: 23vw;
+    background-color: rgb(238, 98, 79);
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.calorieTag-1,
+.calorieTag-2,
+.calorieTag-3 {
+    color: white;
+    width: 23vw;
+    background-color: rgb(238, 98, 79);
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btnContainer-1,
+.btnContainer-2,
+.btnContainer-3 {
+    color: white;
+    width: 23vw;
+    background-color: rgb(238, 98, 79);
+    padding: 0.2rem 0.2rem 0.7rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    background-color: rgb(238, 98, 79);
+    color: white;
+    border: 2px solid white;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn-1:hover,
+.btn-2:hover,
+.btn-3:hover {
+    background-color: red;
+    border: 2px solid white;
+}
+
+.btnHidden_1 {
+    display: none;
+}
+
+.get-recipe {
+    border: 1px solid red;
+    width: 84.4vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    margin-left: 7.8vw;
+    background-color: lightgray;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    margin-top: 4rem;
+    border-radius: 0.5rem;
+    margin-bottom: 5.5rem;
+}
+
+.recipe_header {
+    grid-column: 1 / 4;
+}
+
+.heading {
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+.heading>span {
+    color: teal;
+}
+
+.ingredients {
+    margin-left: 2rem;
+}
+
+.ingredients>ul>li,
+.steps>ul>li {
+    margin-left: 0;
+}
+
+.equipments {
+    margin-right: 10px;
+}
+
+.equipments>ul>li {
+    margin-left: 0;
+}
+
+h4 {
+    color: red;
+    margin-bottom: 1.3rem;
+    font-size: 1.15rem;
+    padding-left: 8px;
+}
+
+ol,
+ul {
+    padding-left: 10px;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 800px) {
+    .generated-meal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 5.5rem;
+    }
+    .get-recipe {
+        height: auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+        margin-left: 2vw;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        margin: auto;
+        margin-bottom: 5.5rem;
+    }
+    .image-1,
+    .image-2,
+    .image-3 {
+        width: 35vw;
+    }
+    .title-1,
+    .title-2,
+    .title-3 {
+        width: 35vw;
+    }
+    .calorieTag-1,
+    .calorieTag-2,
+    .calorieTag-3 {
+        width: 35vw;
+    }
+    .btnContainer-1,
+    .btnContainer-2,
+    .btnContainer-3 {
+        width: 35vw;
+    }
+    .btn-1,
+    .btn-2,
+    .btn-3 {
+        width: 18vw;
+    }
+    .ingredients {
+        margin-left: 0.5rem;
+    }
+    .calorie {
+        width: 60vw;
+        margin-left: 20vw;
+        margin-top: 6rem;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 550px) {
+    .generated-meal {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 5.5rem;
+    }
+    .get-recipe {
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+        padding: 1.5rem 0.5rem 1.5rem 1rem;
+        margin: 0.5rem;
+        margin-bottom: 5.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .image-1,
+    .image-2,
+    .image-3 {
+        width: 65vw;
+    }
+    .title-1,
+    .title-2,
+    .title-3 {
+        width: 65vw;
+    }
+    .calorieTag-1,
+    .calorieTag-2,
+    .calorieTag-3 {
+        width: 65vw;
+    }
+    .btnContainer-1,
+    .btnContainer-2,
+    .btnContainer-3 {
+        width: 65vw;
+    }
+    .btn-1,
+    .btn-2,
+    .btn-3 {
+        width: 44vw;
+    }
+    .ingredients {
+        margin-left: 0.5rem;
+    }
+    .calorie {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 6rem;
+        font-size: 0.8rem;
+    }
+    span {
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-left: 0.2rem;
+    }
+}
